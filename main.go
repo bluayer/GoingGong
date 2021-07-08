@@ -1,12 +1,17 @@
-package GoingGong
+package main
 
 import (
 	"context"
-
-	"github.com/bluayer/GoingGong/ent"
+	"fmt"
+	"os"
 
 	"log"
 	"net/http"
+
+	"entgo.io/ent/dialect"
+	"github.com/bluayer/GoingGong/ent"
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/joho/godotenv"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
@@ -15,10 +20,17 @@ import (
 )
 
 func main() {
-	client, err := ent.Open("sqlite3", "file:ent?mode=memory&cache=shared&_fk=1")
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
+	dbUrl := os.Getenv("DB_URL")
+	port := os.Getenv("PORT")
+	client, err := ent.Open(dialect.MySQL, dbUrl)
 	ctx := context.Background()
 	if err != nil {
-		log.Fatalf("failed opening connection to sqlite: %v", err)
+		log.Fatalf("failed opening connection to mysql: %v", err)
 	}
 	defer client.Close()
 	// Run the auto migration tool.
@@ -49,6 +61,7 @@ func main() {
 			log.Println(err)
 			return c.String(http.StatusBadRequest, "Server ERROR")
 		}
+		fmt.Print(u.Name)
 		_, err := client.User.Create().SetName(u.Name).Save(ctx)
 		if err != nil {
 			log.Println(err)
@@ -58,5 +71,5 @@ func main() {
 	})
 
 	// Start server
-	e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":" + port))
 }
