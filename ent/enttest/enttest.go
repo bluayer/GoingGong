@@ -4,9 +4,9 @@ package enttest
 
 import (
 	"context"
-	"pingpong/ent"
+	"goingong/ent"
 	// required by schema hooks.
-	_ "pingpong/ent/runtime"
+	_ "goingong/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
 )

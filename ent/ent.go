@@ -5,7 +5,7 @@ package ent
 import (
 	"errors"
 	"fmt"
-	"pingpong/ent/user"
+	"goingong/ent/user"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"

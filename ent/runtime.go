@@ -3,8 +3,8 @@
 package ent
 
 import (
-	"pingpong/ent/schema"
-	"pingpong/ent/user"
+	"goingong/ent/schema"
+	"goingong/ent/user"
 
 	"github.com/google/uuid"
 )
@@ -21,6 +21,8 @@ func init() {
 	user.DefaultUUID = userDescUUID.Default.(func() uuid.UUID)
 	// userDescPingCnt is the schema descriptor for pingCnt field.
 	userDescPingCnt := userFields[2].Descriptor()
+	// user.DefaultPingCnt holds the default value on creation for the pingCnt field.
+	user.DefaultPingCnt = userDescPingCnt.Default.(int)
 	// user.PingCntValidator is a validator for the "pingCnt" field. It is called by the builders before save.
 	user.PingCntValidator = userDescPingCnt.Validators[0].(func(int) error)
 }

@@ -6,7 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"pingpong/ent/user"
+	"goingong/ent/user"
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
@@ -35,6 +35,14 @@ func (uc *UserCreate) SetName(s string) *UserCreate {
 // SetPingCnt sets the "pingCnt" field.
 func (uc *UserCreate) SetPingCnt(i int) *UserCreate {
 	uc.mutation.SetPingCnt(i)
+	return uc
+}
+
+// SetNillablePingCnt sets the "pingCnt" field if the given value is not nil.
+func (uc *UserCreate) SetNillablePingCnt(i *int) *UserCreate {
+	if i != nil {
+		uc.SetPingCnt(*i)
+	}
 	return uc
 }
 
@@ -93,6 +101,10 @@ func (uc *UserCreate) defaults() {
 	if _, ok := uc.mutation.UUID(); !ok {
 		v := user.DefaultUUID()
 		uc.mutation.SetUUID(v)
+	}
+	if _, ok := uc.mutation.PingCnt(); !ok {
+		v := user.DefaultPingCnt
+		uc.mutation.SetPingCnt(v)
 	}
 }
 

@@ -6,9 +6,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"goingong/ent/predicate"
+	"goingong/ent/user"
 	"math"
-	"pingpong/ent/predicate"
-	"pingpong/ent/user"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"

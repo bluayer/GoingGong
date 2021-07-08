@@ -5,8 +5,8 @@ package ent
 import (
 	"context"
 	"fmt"
-	"pingpong/ent/predicate"
-	"pingpong/ent/user"
+	"goingong/ent/predicate"
+	"goingong/ent/user"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
@@ -43,6 +43,14 @@ func (uu *UserUpdate) SetName(s string) *UserUpdate {
 func (uu *UserUpdate) SetPingCnt(i int) *UserUpdate {
 	uu.mutation.ResetPingCnt()
 	uu.mutation.SetPingCnt(i)
+	return uu
+}
+
+// SetNillablePingCnt sets the "pingCnt" field if the given value is not nil.
+func (uu *UserUpdate) SetNillablePingCnt(i *int) *UserUpdate {
+	if i != nil {
+		uu.SetPingCnt(*i)
+	}
 	return uu
 }
 
@@ -205,6 +213,14 @@ func (uuo *UserUpdateOne) SetName(s string) *UserUpdateOne {
 func (uuo *UserUpdateOne) SetPingCnt(i int) *UserUpdateOne {
 	uuo.mutation.ResetPingCnt()
 	uuo.mutation.SetPingCnt(i)
+	return uuo
+}
+
+// SetNillablePingCnt sets the "pingCnt" field if the given value is not nil.
+func (uuo *UserUpdateOne) SetNillablePingCnt(i *int) *UserUpdateOne {
+	if i != nil {
+		uuo.SetPingCnt(*i)
+	}
 	return uuo
 }
 

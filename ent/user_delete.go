@@ -5,8 +5,8 @@ package ent
 import (
 	"context"
 	"fmt"
-	"pingpong/ent/predicate"
-	"pingpong/ent/user"
+	"goingong/ent/predicate"
+	"goingong/ent/user"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"

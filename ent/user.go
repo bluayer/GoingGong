@@ -4,7 +4,7 @@ package ent
 
 import (
 	"fmt"
-	"pingpong/ent/user"
+	"goingong/ent/user"
 	"strings"
 
 	"entgo.io/ent/dialect/sql"

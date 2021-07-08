@@ -3,7 +3,7 @@
 package user
 
 import (
-	"pingpong/ent/predicate"
+	"goingong/ent/predicate"
 
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"

@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"log"
 
-	"pingpong/ent/migrate"
+	"goingong/ent/migrate"
 
-	"pingpong/ent/user"
+	"goingong/ent/user"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
