@@ -19,7 +19,6 @@ func (User) Fields() []ent.Field {
 		field.String("name").
 			Unique(),
 		field.Int("pingCnt").
-			Positive().
 			Default(0),
 	}
 }
