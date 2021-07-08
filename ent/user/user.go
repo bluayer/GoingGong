@@ -44,6 +44,4 @@ var (
 	DefaultUUID func() uuid.UUID
 	// DefaultPingCnt holds the default value on creation for the "pingCnt" field.
 	DefaultPingCnt int
-	// PingCntValidator is a validator for the "pingCnt" field. It is called by the builders before save.
-	PingCntValidator func(int) error
 )

@@ -4,7 +4,8 @@ go 1.16
 
 require (
 	entgo.io/ent v0.8.0
-	github.com/bluayer/GoingGong/model v0.0.0-20210708050515-7ba2a0b00e24 // indirect
+	github.com/bluayer/GoingGong/ent v0.0.0-20210708051948-58b1e05d0553
+	github.com/bluayer/GoingGong/model v0.0.0-20210708050515-7ba2a0b00e24
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/google/uuid v1.2.0 // indirect

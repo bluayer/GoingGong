@@ -119,11 +119,6 @@ func (uc *UserCreate) check() error {
 	if _, ok := uc.mutation.PingCnt(); !ok {
 		return &ValidationError{Name: "pingCnt", err: errors.New("ent: missing required field \"pingCnt\"")}
 	}
-	if v, ok := uc.mutation.PingCnt(); ok {
-		if err := user.PingCntValidator(v); err != nil {
-			return &ValidationError{Name: "pingCnt", err: fmt.Errorf("ent: validator failed for field \"pingCnt\": %w", err)}
-		}
-	}
 	return nil
 }
 
