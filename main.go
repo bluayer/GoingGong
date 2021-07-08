@@ -65,7 +65,7 @@ func main() {
 		_, err := client.User.Create().SetName(u.Name).SetPingCnt(0).Save(ctx)
 		if err != nil {
 			log.Println(err)
-			return c.String(http.StatusBadRequest, "Server ERROR")
+			return c.String(http.StatusBadRequest, "Server ERRORe")
 		}
 		return c.String(http.StatusOK, "User Created!")
 	})
