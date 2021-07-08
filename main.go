@@ -1,8 +1,9 @@
-package main
+package goinggong
 
 import (
 	"context"
-	"goingong/ent"
+
+	"github.com/bluayer/GoingGong/ent"
 
 	"log"
 	"net/http"
