@@ -42,6 +42,4 @@ func ValidColumn(column string) bool {
 var (
 	// DefaultUUID holds the default value on creation for the "uuid" field.
 	DefaultUUID func() uuid.UUID
-	// DefaultPingCnt holds the default value on creation for the "pingCnt" field.
-	DefaultPingCnt int
 )

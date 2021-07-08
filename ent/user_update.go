@@ -46,14 +46,6 @@ func (uu *UserUpdate) SetPingCnt(i int) *UserUpdate {
 	return uu
 }
 
-// SetNillablePingCnt sets the "pingCnt" field if the given value is not nil.
-func (uu *UserUpdate) SetNillablePingCnt(i *int) *UserUpdate {
-	if i != nil {
-		uu.SetPingCnt(*i)
-	}
-	return uu
-}
-
 // AddPingCnt adds i to the "pingCnt" field.
 func (uu *UserUpdate) AddPingCnt(i int) *UserUpdate {
 	uu.mutation.AddPingCnt(i)
@@ -197,14 +189,6 @@ func (uuo *UserUpdateOne) SetName(s string) *UserUpdateOne {
 func (uuo *UserUpdateOne) SetPingCnt(i int) *UserUpdateOne {
 	uuo.mutation.ResetPingCnt()
 	uuo.mutation.SetPingCnt(i)
-	return uuo
-}
-
-// SetNillablePingCnt sets the "pingCnt" field if the given value is not nil.
-func (uuo *UserUpdateOne) SetNillablePingCnt(i *int) *UserUpdateOne {
-	if i != nil {
-		uuo.SetPingCnt(*i)
-	}
 	return uuo
 }
 

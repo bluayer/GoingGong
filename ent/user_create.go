@@ -38,14 +38,6 @@ func (uc *UserCreate) SetPingCnt(i int) *UserCreate {
 	return uc
 }
 
-// SetNillablePingCnt sets the "pingCnt" field if the given value is not nil.
-func (uc *UserCreate) SetNillablePingCnt(i *int) *UserCreate {
-	if i != nil {
-		uc.SetPingCnt(*i)
-	}
-	return uc
-}
-
 // Mutation returns the UserMutation object of the builder.
 func (uc *UserCreate) Mutation() *UserMutation {
 	return uc.mutation
@@ -101,10 +93,6 @@ func (uc *UserCreate) defaults() {
 	if _, ok := uc.mutation.UUID(); !ok {
 		v := user.DefaultUUID()
 		uc.mutation.SetUUID(v)
-	}
-	if _, ok := uc.mutation.PingCnt(); !ok {
-		v := user.DefaultPingCnt
-		uc.mutation.SetPingCnt(v)
 	}
 }
 

@@ -18,8 +18,4 @@ func init() {
 	userDescUUID := userFields[0].Descriptor()
 	// user.DefaultUUID holds the default value on creation for the uuid field.
 	user.DefaultUUID = userDescUUID.Default.(func() uuid.UUID)
-	// userDescPingCnt is the schema descriptor for pingCnt field.
-	userDescPingCnt := userFields[2].Descriptor()
-	// user.DefaultPingCnt holds the default value on creation for the pingCnt field.
-	user.DefaultPingCnt = userDescPingCnt.Default.(int)
 }

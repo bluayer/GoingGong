@@ -18,7 +18,6 @@ func (User) Fields() []ent.Field {
 			Default(uuid.New),
 		field.String("name").
 			Unique(),
-		field.Int("pingCnt").
-			Default(0),
+		field.Int("pingCnt"),
 	}
 }
