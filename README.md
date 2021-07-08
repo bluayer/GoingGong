@@ -1,5 +1,5 @@
 # Goinggong
-Go로 만드는 ping pong
+Go로 사람들끼리 Ping & Pong할 수 있게 하는 Project
 
 ## 목표
 1. Go로 작동하는 웹서버를 만든다. ✔
