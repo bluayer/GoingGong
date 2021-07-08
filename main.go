@@ -10,6 +10,7 @@ import (
 
 	"entgo.io/ent/dialect"
 	"github.com/bluayer/GoingGong/ent"
+	"github.com/bluayer/GoingGong/ent/user"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/joho/godotenv"
 
@@ -49,9 +50,24 @@ func main() {
 			log.Println(err)
 			return c.String(http.StatusBadRequest, "Server ERROR")
 		}
+
 		return c.JSON(http.StatusOK, echo.Map{
 			"status": true,
 			"users":  users,
+		})
+	})
+
+	e.GET("/user/:name", func(c echo.Context) error {
+		name := c.Param("name")
+		foundUser, err := client.User.Query().Where(user.NameEQ(name)).First(ctx)
+		if err != nil {
+			log.Println(err)
+			return c.String(http.StatusBadRequest, "Server ERROR")
+		}
+		client.User.UpdateOneID(foundUser.ID).SetPingCnt(foundUser.PingCnt + 1).Save(ctx)
+		return c.JSON(http.StatusOK, echo.Map{
+			"status": true,
+			"user":   foundUser,
 		})
 	})
 

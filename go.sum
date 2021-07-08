@@ -31,10 +31,14 @@ github.com/bluayer/GoingGong/ent v0.0.0-20210708035939-6d9604e75ea9 h1:0Wv3mhg22
 github.com/bluayer/GoingGong/ent v0.0.0-20210708035939-6d9604e75ea9/go.mod h1:eroEFkyytMXTS1Jh/7PwG9LAKqdIy3an4raapxs6UBw=
 github.com/bluayer/GoingGong/ent v0.0.0-20210708051948-58b1e05d0553 h1:TxRbGw9n1XTFOCAQ259JI9dPgfGY+AX58ngK7hC6Eqg=
 github.com/bluayer/GoingGong/ent v0.0.0-20210708051948-58b1e05d0553/go.mod h1:eroEFkyytMXTS1Jh/7PwG9LAKqdIy3an4raapxs6UBw=
+github.com/bluayer/GoingGong/ent v0.0.0-20210708052557-d7cb70c395bc h1:Ouz/m8ysxHJFlJ13hxxWwDjSAW99s44epstbKK0PZ5A=
+github.com/bluayer/GoingGong/ent v0.0.0-20210708052557-d7cb70c395bc/go.mod h1:eroEFkyytMXTS1Jh/7PwG9LAKqdIy3an4raapxs6UBw=
 github.com/bluayer/GoingGong/model v0.0.0-20210708035939-6d9604e75ea9 h1:7/ATngspZJCmt/O7AcsJRT/w/d6CKinZn0YBUEkkI1c=
 github.com/bluayer/GoingGong/model v0.0.0-20210708035939-6d9604e75ea9/go.mod h1:nTCJ9tym22XCFp0UoWIreD+itKN1V2WUKQgOB+j2pcg=
 github.com/bluayer/GoingGong/model v0.0.0-20210708050515-7ba2a0b00e24 h1:xcyuws1lz+2GAVttYJwNrkrrv3XUdwilqb666Bc08Yw=
 github.com/bluayer/GoingGong/model v0.0.0-20210708050515-7ba2a0b00e24/go.mod h1:nTCJ9tym22XCFp0UoWIreD+itKN1V2WUKQgOB+j2pcg=
+github.com/bluayer/GoingGong/model v0.0.0-20210708051948-58b1e05d0553 h1:pRabChlnhWP5uRyX3QtsQESSDp2KvPcNzXVaQal7Kzs=
+github.com/bluayer/GoingGong/model v0.0.0-20210708051948-58b1e05d0553/go.mod h1:nTCJ9tym22XCFp0UoWIreD+itKN1V2WUKQgOB+j2pcg=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghfAqPWnc=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
